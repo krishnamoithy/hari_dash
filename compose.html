@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compose New Post</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+  <style>
+    :root {
+      --color-twitter: #1B95E0;
+      --color-grey: #999;
+      --color-dark: #000;
+      --color-white: #fff;
+      --color-light: #eee;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-light);
+    }
+    
+    .twitter-wrap {
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      height: 100vh;
+    }
+    
+    .side-left {
+      border-right: 1px solid var(--color-light);
+      position: fixed;
+      height: 100%;
+      width: 20%;
+      text-align: right;
+      z-index: 1;
+    }
+    
+    .side-main {
+      border-right: 1px solid var(--color-light);
+      padding: 20px;
+      background-color: var(--color-white);
+      z-index: 2;
+      overflow-y: auto;
+    }
+    
+    .side-right {
+      border-left: 1px solid var(--color-light);
+      padding: 10px 5px;
+      background-color: var(--color-light);
+    }
+    
+    .compose-post {
+      margin-top: 20px;
+    }
+    
+    .compose-post textarea {
+      width: 100%;
+      height: 150px;
+      border: 1px solid var(--color-light);
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: var(--color-dark);
+    }
+    
+    .compose-post .attachment {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .compose-post .attachment input[type="file"] {
+      margin-right: 10px;
+    }
+    
+    .compose-post button {
+      background-color: var(--color-twitter);
+      color: var(--color-white);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .compose-post button:hover {
+      background-color: darken(var(--color-twitter), 10%);
+    }
+  </style>
+</head>
+<body>
+  <div class="twitter-wrap">
+    <!-- Left Sidebar -->
+    <div class="side-left">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="menu-link" href="profile.html">
+            <i class="fas fa-dove"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="posts.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="trends.html">
+            <i class="fas fa-hashtag"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="notifications.html">
+            <i class="fas fa-bell"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="messages.html">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="bookmarks.html">
+            <i class="fas fa-bookmark"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link active" href="more.html">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link add-twit" href="compose.html">
+            <i class="fas fa-feather-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="side-main">
+      <h1>Compose New Post</h1>
+      <div class="compose-post">
+        <textarea placeholder="What's happening?"></textarea>
+        <div class="attachment">
+          <input type="file" accept="image/*,video/*">
+          <label for="attachment">Attach media</label>
+        </div>
+        <button type="submit">Post</button>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="side-right">
+      <div class="search-form">
+        <form action="">
+          <label for="search"><i class="fas fa-search"></i></label>
+          <input type="text" id="search" placeholder="Search Twitter">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

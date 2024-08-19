@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+  <style>
+    :root {
+      --color-twitter: #1B95E0;
+      --color-grey: #999;
+      --color-dark: #000;
+      --color-white: #fff;
+      --color-light: #eee;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-light);
+    }
+    
+    .twitter-wrap {
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      height: 100vh;
+    }
+    
+    .side-left {
+      border-right: 1px solid var(--color-light);
+      position: fixed;
+      height: 100%;
+      width: 20%;
+      text-align: right;
+      z-index: 1;
+    }
+    
+    .side-main {
+      border-right: 1px solid var(--color-light);
+      padding: 20px;
+      background-color: var(--color-white);
+      z-index: 2;
+    }
+    
+    .side-right {
+      border-left: 1px solid var(--color-light);
+      padding: 10px 5px;
+      background-color: var(--color-light);
+    }
+    
+    .notifications-list {
+      margin-top: 20px;
+    }
+    
+    .notification-item {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-light);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .notification-item h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .notification-item p {
+      color: var(--color-grey);
+    }
+    
+    .notification-item .timestamp {
+      font-size: 12px;
+      color: var(--color-grey);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="twitter-wrap">
+    <!-- Left Sidebar -->
+    <div class="side-left">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="menu-link" href="profile.html">
+            <i class="fas fa-dove"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="posts.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="trends.html">
+            <i class="fas fa-hashtag"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link active" href="notifications.html">
+            <i class="fas fa-bell"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="messages.html">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="bookmarks.html">
+            <i class="fas fa-bookmark"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="profile.html">
+            <img class="user-img-30" alt="User Profile Picture" src="https://i.imgur.com/4FbD7mF.png">
+          </a>
+          <div class="box">
+            <img src="https://i.imgur.com/4FbD7mF.png" alt="User Profile Picture" class="user-img-40">
+            <p class="name">David Smith</p>
+            <p class="username">@davidsmith</p>
+            <div class="bio">Front-end web developer</div>
+            <div class="folow">
+              <a href="following.html"><span>83</span> Following</a>
+              <a href="followers.html"><span>83</span> Followers</a>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="more.html">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link add-twit" href="compose.html">
+            <i class="fas fa-feather-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="side-main">
+      <h1>Notifications</h1>
+      <div class="notifications-list">
+        <div class="notification-item">
+          <h4>John Doe liked your post</h4>
+          <p>Your post "How to learn JavaScript" received a like from John Doe.</p>
+          <span class="timestamp">10 minutes ago</span>
+        </div>
+        <div class="notification-item">
+          <h4>Jane Smith followed you</h4>
+          <p>Jane Smith started following you.</p>
+          <span class="timestamp">1 hour ago</span>
+        </div>
+        <div class="notification-item">
+          <h4>New message from Alex</h4>
+          <p>Alex sent you a new message: "Let's catch up this weekend."</p>
+          <span class="timestamp">3 hours ago</span>
+        </div>
+        <div class="notification-item">
+          <h4>Post shared by Mark</h4>
+          <p>Mark shared your post "Top 10 JavaScript frameworks."</p>
+          <span class="timestamp">5 hours ago</span>
+        </div>
+        <div class="notification-item">
+          <h4>New comment on your post</h4>
+          <p>Someone commented on your post: "Great insights on web development!"</p>
+          <span class="timestamp">1 day ago</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="side-right">
+      <div class="search-form">
+        <form action="">
+          <label for="search"><i class="fas fa-search"></i></label>
+          <input type="text" id="search" placeholder="Search Twitter">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

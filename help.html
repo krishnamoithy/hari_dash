@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+  <style>
+    :root {
+      --color-twitter: #1B95E0;
+      --color-grey: #999;
+      --color-dark: #000;
+      --color-white: #fff;
+      --color-light: #eee;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-light);
+    }
+    
+    .twitter-wrap {
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      height: 100vh;
+    }
+    
+    .side-left {
+      border-right: 1px solid var(--color-light);
+      position: fixed;
+      height: 100%;
+      width: 20%;
+      text-align: right;
+      z-index: 1;
+    }
+    
+    .side-main {
+      border-right: 1px solid var(--color-light);
+      padding: 20px;
+      background-color: var(--color-white);
+      z-index: 2;
+      overflow-y: auto;
+    }
+    
+    .side-right {
+      border-left: 1px solid var(--color-light);
+      padding: 10px 5px;
+      background-color: var(--color-light);
+    }
+    
+    .help-section {
+      margin-bottom: 20px;
+    }
+    
+    .help-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: var(--color-dark);
+    }
+    
+    .help-section p {
+      font-size: 16px;
+      color: var(--color-dark);
+      margin-bottom: 10px;
+    }
+    
+    .contact-info {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-light);
+      border-radius: 5px;
+    }
+    
+    .contact-info h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .contact-info p {
+      font-size: 16px;
+      color: var(--color-dark);
+    }
+    
+    .faq {
+      margin-top: 20px;
+    }
+    
+    .faq h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--color-dark);
+    }
+    
+    .faq ul {
+      list-style: none;
+    }
+    
+    .faq li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .faq a {
+      color: var(--color-twitter);
+      text-decoration: none;
+    }
+    
+    .faq a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="twitter-wrap">
+    <!-- Left Sidebar -->
+    <div class="side-left">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="menu-link" href="profile.html">
+            <i class="fas fa-dove"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="posts.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="trends.html">
+            <i class="fas fa-hashtag"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="notifications.html">
+            <i class="fas fa-bell"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="messages.html">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="bookmarks.html">
+            <i class="fas fa-bookmark"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="more.html">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link add-twit" href="compose.html">
+            <i class="fas fa-feather-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="side-main">
+      <h1>Help & Support</h1>
+      
+      <!-- Help Section -->
+      <div class="help-section">
+        <h2>Welcome to Help & Support</h2>
+        <p>If you need assistance or have any questions, you can find the information here or contact our support team for further help.</p>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Email: support@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+
+      <!-- FAQs -->
+      <div class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <ul>
+          <li><a href="#">How do I reset my password?</a></li>
+          <li><a href="#">How do I update my profile information?</a></li>
+          <li><a href="#">How do I contact support?</a></li>
+          <li><a href="#">How do I report a problem?</a></li>
+          <li><a href="#">How can I delete my account?</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="side-right">
+      <div class="search-form">
+        <form action="">
+          <label for="search"><i class="fas fa-search"></i></label>
+          <input type="text" id="search" placeholder="Search Twitter">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
